@@ -1,0 +1,82 @@
+{% extends "layouts/base.html" %} {% load humanize %} {% load static %} {% load customfilter %}
+<!-- Specific Page CSS goes HERE  -->
+
+
+{% block content %}
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      body {
+          margin-top: 05%;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          padding: 30px;
+          background: rgb(155, 233, 190);
+          line-height: 1.6;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 1px rgb(0, 0, 0) solid;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+ 
+      
+    </style>    
+    <title>COMPUTER BRANCH</title>
+</head>
+<div class="container-fluid">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card card-default rounded-0 shadow ">
+          <div class="card-header">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+<body>
+    <h1>Result Of Student</h1>
+    <br>
+    <Center>
+      <h2>Computer Engineering</h2>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+      <h2 align="center">Select Semester</h2>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+<br>      
+      <a href="{% url 'cosem1_r' %}" target="#">First Semester </a><br/>
+      <a href="{% url 'cosem2_r' %}" target="#">Third Semester</a><br/>
+      <a href="{% url 'cosem3_R' %}" target="#">fifth Semester</a><br/>
+  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------         
+    </center>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}
