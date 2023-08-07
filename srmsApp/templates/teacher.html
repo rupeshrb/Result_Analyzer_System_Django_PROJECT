@@ -1,0 +1,85 @@
+{% load humanize %} {% load static %} {% load customfilter %}
+<!-- Specific Page CSS goes HERE  -->
+
+
+{% block content %}
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ MEDIA_URL }}/default/logo.png">
+    <link rel="icon" href="{{ MEDIA_URL }}/default/logo.png">
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      body {
+          
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          padding: 30px;
+          color: #fff;
+          background: rgb(23, 31, 52);
+          line-height: 1.6;
+      }
+      a{
+        color:rgb(238, 232, 232) ;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color:rgb(238, 232, 232) ;
+        border-bottom: 1px rgb(238, 232, 232) solid;
+      }
+
+      h2 {
+        color:rgb(238, 232, 232) ;
+        margin-top: 20px;
+      }
+
+      a.a1{
+		color: #fff;
+        background: rgb(0, 0, 0);
+		font-size: 25px;
+		margin-left: 3%;
+	  }
+      
+    </style>    
+    <title>Teacher DashBoard | Result Analysis System</title>
+</head>
+<body>
+  <a href="{% url 'login' %}" class="a1">BACK</a>
+    <h1>Result Analyzer</h1>
+    
+     <center>
+            <img src="{{ MEDIA_URL }}/default/logo.png" alt="System Logo" class="bg-gradient-light rounded-circle border-light border-2" id="logo-img">
+        </center>
+    <Center>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      <h2 align="center">Select Branch</h2>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      <a href="{% url 'comsem_t' %}" target="#">Computer Engineering</a><br/>
+      <a href="{% url 'mec_teach' %}" target="#">Mechanical Engineering</a><br/>
+      <a href="{% url 'civ_teach' %}" target="#">Civil Engineering</a><br/>
+      <a href="{% url 'ele_teach' %}" target="#">Electrical Engineering</a><br/>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    </center>
+</body>
+</html>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}

@@ -1,0 +1,102 @@
+{% extends "layouts/base.html" %} {% load humanize %} {% load static %} {% load customfilter %}
+<!-- Specific Page CSS goes HERE  -->
+
+
+{% block content %}
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      body {
+          margin-top: 05%;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          padding: 30px;
+          background: rgb(155, 233, 190);
+          line-height: 1.6;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 1px rgb(0, 0, 0) solid;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        display: block;
+        background: rgb(27, 135, 40);
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 20px 0;
+      }
+      input[type="reset"] {
+        cursor: pointer;
+        display: block;
+        background: rgb(0, 0, 0);
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 20px 0;
+      }
+      input[type="text"] {
+        border: 1px #ccc solid;
+        width: 300px;
+        padding: 4px;
+        height: 35px;
+        margin-top: 20px;
+      }
+
+ 
+      
+    </style>    
+  
+</head>
+
+<body>
+    <h1>PDF Scraper Fro Msbte Results</h1>
+    <Center>
+      <h2 align="center">SEMESTER FIFTH</h2>
+    </Center>
+      
+<br>  
+<h1>Coming Soon.....</h1>    
+<!-- <form method="post" > 
+  
+  {% csrf_token %} 
+  ------------------------------------------------------------------------------------------------------------------------------------------------
+
+   <center> <input type="text" name="civ3"  placeholder="Enter /Folder/path/"><input type="submit" value="Submit" ><input type="reset" value="Reset" ></center>
+  ------------------------------------------------------------------------------------------------------------------------------------------------
+</center>
+</form> -->
+
+  
+</body>
+</html>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}
