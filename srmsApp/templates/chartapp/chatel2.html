@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ MEDIA_URL }}/default/logo.png">
+    <link rel="icon" href="{{ MEDIA_URL }}/default/logo.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+<style>
+   * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+      a{
+        color:rgb(238, 232, 232) ;
+      }
+      body {
+          
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          padding: 30px;
+          color: #fff;
+          background: rgb(23, 31, 52);
+          line-height: 1.6;
+      }
+  </style>
+   
+  </head>
+  <body>
+ 
+    <div class="container">
+
+<a href="{% url 'elb2' %}" class="a1">BACK</a>
+<center>
+<h1 class="text-center">Result Anaylsis For SEM-3 By Chart</h1>
+
+        <div class="col-md-8">
+            <canvas id="myChart" width="300" height="200"></canvas>
+            <script>
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        
+                        labels: ["No. of Students","No. of Appeared","No. of All clear","No. of A.T.K.T","No. of Second class","No. of Second class con","No. of FAILED","Total DISTINCTION","Total First Class","First Class Con","Over All Average %"],
+                        datasets: [{
+                            label: 'Analysis View',
+                     
+                            data: [ 56, {{city_list}},28,0,1,1,5,17,14,6,{{avg}}],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.8)',
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)',
+                                'rgba(75, 192, 192, 0.8)',
+                                'rgba(153, 102, 255, 0.8)',
+                                'rgba(255, 159, 64, 0.8)',
+                                'rgba(240, 120, 50, 0.8)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(240, 120, 50, 1)',
+
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+                </script>
+                
+        </div></center>
+    </div>
+
+
+
+</div>
+
+
+    
+    
+</body>
+</html>
+

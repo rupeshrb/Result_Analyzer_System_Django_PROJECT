@@ -1,0 +1,78 @@
+{% extends 'layouts/base.html' %}{% load static %}{% block content %}
+<!-- <style>
+    main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+    }
+</style> -->
+<div class="container py-5">
+    <div class="d-flex flex-column w-100 justify-content-center align-items-center">
+       <table border="1" id="myTable">
+        <tr> 
+            <th>#</th>
+            <th>Enrollment no.</th>
+            <th>Name</th>
+            <th>Seat no.</th>
+            <th>Branch</th>
+            <th>EVS</th>
+            <th>OS_TH</th>
+            <th>OS_PR</th>
+            <th>AJP_TH</th>
+            <th>AJP_PR</th>
+            <th>ST_TH</th>
+            <th>ST_PR</th>
+            <th>CSSL_TH</th>
+            <th>CSSL_PR</th>
+            <th>IT</th>
+            <th>CPP</th>
+            <th>PER %</th>
+            <th>TOTAL</th>
+            <th>DIST</th>
+      </tr>
+
+        {% for result in user%}
+        
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td> {{ result.ENROLLMENT_NO }} </td>
+            <td> {{ result.name }} </td>
+            <td> {{ result.SEAT_NO }} </td>
+            <td> {{ result.BRANCH }} </td>
+            <td> {{ result.EVS}} </td>
+            <td> {{ result.OS }} </td>
+            <td> {{ result.OS_P }} </td>
+            <td> {{ result.AJP }} </td>
+            <td> {{ result.AJP_P}} </td>
+            <td> {{ result.ST}} </td>
+            <td> {{ result.ST_P}} </td>
+            <td> {{ result.CSSL}} </td>
+            <td> {{ result.CSSL_P}} </td>
+            <td> {{ result.IT}} </td>
+            <td> {{ result.CPP}} </td>
+            <td> {{ result.PERCENTAGE}} </td>
+            <td> {{ result.TOTAL}} </td>
+            <td> {{ result.DIST}} </td>
+       </tr>
+       {% endfor %}
+       
+</table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %} {% block javascripts %}
+<script>
+    $(function() {
+        $('.view_result').click(function() {
+            uni_modal('<i class="material-icons">preview</i>Result Details', $(this).attr('data-url'), 'modal-xl')
+        })
+    })
+</script>
+{% endblock javascripts %}

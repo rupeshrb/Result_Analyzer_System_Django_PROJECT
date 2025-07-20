@@ -1,0 +1,121 @@
+ {% load humanize %} {% load static %} {% load customfilter %}
+<!-- Specific Page CSS goes HERE  -->
+
+
+{% block content %}
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ MEDIA_URL }}/default/logo.png">
+      <link rel="icon" href="{{ MEDIA_URL }}/default/logo.png">
+    <style>
+          * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+      body {
+          
+        font: bold 1em/100% "Helvetica Neue", Arial, sans-serif;
+	    padding: 2em 0;
+	    font-size: 17px;
+        color: #fff;
+        background: rgb(23, 31, 52);
+        line-height: 1.6;
+      }
+      h2 {
+        color:rgb(238, 232, 232) ;
+        margin-top: 20px;
+      }
+	  a{
+		color: #fff;
+        background: rgb(0, 0, 0);
+		font-size: 25px;
+		margin-left: 3%;
+	  }
+      h1
+			{
+  				border: 0.5rem outset pink;
+  				outline: 0.5rem solid khaki;
+  				font-size: 15px;
+ 				border-radius: 12px;
+  				font: bold 1rem sans-serif;
+				text-align: center;
+  				margin: 2rem;
+  				padding: 1rem;
+  				outline-offset: 0.5rem;
+			}
+			label.l1{
+				margin-left: 10.5%;
+			}
+			label.l2{
+				
+				margin-left: 26.5%;
+			}
+			input.btne{
+		cursor: pointer;
+        display: block;
+        background: rgb(27, 135, 40);
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 10px 0;
+	
+			}
+            input.ttt{
+		cursor: pointer;
+        display: block;
+        background: rgb(228, 255, 153);
+        color: rgb(0, 0, 0);
+        
+        border: 0;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 10px 0;
+	
+			}
+      
+    </style>    
+    <title>COMPUTER BRANCH</title>
+</head>
+<div class="container-fluid">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card card-default rounded-0 shadow ">
+          <div class="card-header">
+              <div class="d-flex w-100 align-items-center justify-content-between">
+<body>
+    <a href="{% url 'teacher' %}">BACK</a>
+    <h1>Teacher DashBorad</h1>
+    <br>
+    <Center>
+      <h2>Computer Engineering</h2>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+      <h2 >Select Semester</h2>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------      
+<br>      
+      <a href="{% url 'com_teacher1' %}" target="#">First Semester </a><br/>
+      <a href="{% url 'menu_teach' %}" target="#">Third Semester</a><br/>
+      <a href="{% url 'com_teach' %}" target="#">Fifth Semester</a><br/>
+  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------         
+    </center>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
